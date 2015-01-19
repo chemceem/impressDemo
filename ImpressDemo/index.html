@@ -3,16 +3,50 @@
 <head>
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width-device-width, initial-scale = 1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <title>Impress Demo</title>
     <!-- CSS Section -->
+    <link href="css/reset.css" rel="stylesheet" />
     <link href="css/game.css" rel="stylesheet" />
 
 </head>
-<body>
+<body onload="main();">
+
+    <!--First Slide-->
+    <div id="impress">
+        <div id="1" class="step slide">
+            <div class="slide-text">
+                <p>There is a time machine over there...Flip the switch ??</p>
+                <p><a href="#2">Flip</a></p>
+                <p><a href="#3">WAIT</a> for your dad, who is a scientist, to come home.</p>
+            </div>
+        </div>
+    
+
+    <!--Second Slide-->
+    
+        <div id="2" class="step slide" data-x="1500">
+            <div class="slide-text">
+                <p>You went back in time. It was fun</p>
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
+            </div>
+        </div>
+    
+    <!--Third Slide-->
+    <
+        <div id="3" class="step slide" data-x="-1500">
+            <div class="slide-text">
+                <p>You waited for your dad and he didn't want to go back through time.</p>
+                <p>Man you're bored.</p>
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript Section-->
     <script src="Scripts/lib/game.js"></script>
     <script src="Scripts/lib/impress.js"></script>
+    <script>impress().init</script>
+    
 </body>
 </html>
